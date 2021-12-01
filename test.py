@@ -1,1 +1,1 @@
-import numpy jfweof
+import numpy 
