@@ -19,20 +19,22 @@ user = int(input())
 
 if user == 1:
     usernumbers=[0,0,0,0,0,0]
-    for i in range(6):
+    for i in usernumbers:
         x = int(input('geben sie die erste Zahl ein:'))
-        if x in range(1,49,1) and x not in usernumbers:
+        if x in range(1,49,1) and x not in usernumbers and x > 0:
             usernumbers[i] = x
-        else:
-            usernumbers[i] = int(input('geben sie die erste Zahl ein zwischen 1 und 49:'))
+            if x <= 0 and x not in range(1,49,1):
+                x = int(input('geben sie die erste Zahl ein zwischen 1 und 49:'))
+                usernumbers[i] = x
 if user == 2:
     lotto2 = lotto()
     usernumbers = lotto2.numbers
+    
 lotto = lotto()
 zahler = 0
 for j in range(6):
     for z in range(6):
-        if lotto.numbers[j] == usernumbers[z]:
+        if lotto.numbers[z] == usernumbers[z]:
                 zahler += 1
 usernumbers.sort()
 print(lotto.numbers)
