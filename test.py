@@ -1,5 +1,5 @@
 import random
-
+import socket
 
 numbers = [0,0,0,0,0,0]
 for i in range(6):
